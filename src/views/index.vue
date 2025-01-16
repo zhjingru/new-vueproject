@@ -2,6 +2,7 @@
 import {ref} from 'vue'
 import NavMenu from './navMenu.vue';
 import Header from './headNav.vue';
+import Headerdown from './headerdown.vue'
 </script>
 
 <template>
@@ -9,12 +10,16 @@ import Header from './headNav.vue';
     <el-container >
       <!-- 左侧导航栏 -->
       <NavMenu />
-      <el-container>
+      <el-container class="header-and-main">
          <!-- 头部 -->
          <el-header>
              <Header />
          </el-header>
-        <el-main>区域</el-main>
+        <el-main>
+          <el-scrollbar>
+            <RouterView />
+          </el-scrollbar>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -22,5 +27,8 @@ import Header from './headNav.vue';
 </template>
 
 <style scoped>
-
+.header-and-main {
+  flex-direction: column;
+  height:100vh;
+}
 </style>

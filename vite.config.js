@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
+import sass from 'sass';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -32,4 +33,11 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        implementation: sass,
+      },
+    },
+  },
 })
