@@ -128,142 +128,163 @@
 </template>
 
 <style scoped="scoped">
-	.login-register {
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-  background-image: url('@/assets/background.jpg'); /* 使用别名 */
-  background-size: cover; /* 覆盖整个容器 */
-  background-position: center; /* 图片居中 */
-  background-repeat: no-repeat; /* 图片不重复 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; 
+  font-family: '楷体', '楷体_GB2312', 'STKaiti', serif;
 }
-	.contain{
-		width: 60%;
-		height: 60%;
-		position: relative;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		background-color: #fff;
-		border-radius: 20px;
-		box-shadow: 0 0 3px #f0f0f0,
-					0 0 6px #f0f0f0;
-		opacity: 0.8; 
-	}
-	.big-box{
-		width: 70%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 30%;
-		transform: translateX(0%);
-		transition: all 1s;
-	}
-	.big-contain{
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.btitle{
-		font-size: 1.5em;
-		font-weight: bold;
-		color: rgb(162, 171, 172);
-	}
-	.bform{
-		width: 100%;
-		height: 40%;
-		padding: 2em 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
-	}
-	.bform .errTips{
-		display: block;
-		width: 50%;
-		text-align: left;
-		color: red;
-		font-size: 0.7em;
-		margin-left: 1em;
-	}
-	.bform input{
-		width: 50%;
-		height: 30px;
-		border: none;
-		outline: none;
-		border-radius: 10px;
-		padding-left: 2em;
-		background-color: #f0f0f0;
-	}
-	.bbutton{
-		width: 20%;
-		height: 40px;
-		border-radius: 24px;
-		border: none;
-		outline: none;
-		background-color: rgb(162, 171, 172);
-		color: #fff;
-		font-size: 0.9em;
-		cursor: pointer;
-	}
-	.small-box{
-		width: 30%;
-		height: 100%;
-		background: linear-gradient(135deg,rgb(162, 171, 172),rgb(162, 171, 172));
-		position: absolute;
-		top: 0;
-		left: 0;
-		transform: translateX(0%);
-		transition: all 1s;
-		border-top-left-radius: inherit;
-		border-bottom-left-radius: inherit;
-	}
-	.small-contain{
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.stitle{
-		font-size: 1.5em;
-		font-weight: bold;
-		color: #fff;
-	}
-	.scontent{
-		font-size: 0.8em;
-		color: #fff;
-		text-align: center;
-		padding: 2em 4em;
-		line-height: 1.7em;
-	}
-	.sbutton{
-		width: 60%;
-		height: 40px;
-		border-radius: 24px;
-		border: 1px solid #fff;
-		outline: none;
-		background-color: transparent;
-		color: #fff;
-		font-size: 0.9em;
-		cursor: pointer;
-	}
-	
-	.big-box.active{
-		left: 0;
-		transition: all 0.5s;
-	}
-	.small-box.active{
-		left: 100%;
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-		border-top-right-radius: inherit;
-		border-bottom-right-radius: inherit;
-		transform: translateX(-100%);
-		transition: all 1s;
-	}
+
+.login-register {
+  margin: 0;
+  padding: 0;
+  height: 97vh;
+  background-image: url('@/assets/background.jpg'); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  overflow: hidden;
+}
+
+.contain {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 50%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 3px #f0f0f0, 0 0 6px #f0f0f0;
+}
+
+.big-box {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 30%;
+  transform: translateX(0%);
+  transition: all 1s;
+}
+
+.big-contain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(72, 163, 173);
+}
+
+.bform {
+  width: 100%;
+  height: 40%;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bform .errTips {
+  display: block;
+  width: 50%;
+  text-align: left;
+  color: red;
+  font-size: 0.7em;
+  margin-left: 1em;
+}
+
+.bform input {
+  width: 50%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 2em;
+  background-color: #f0f0f0;
+}
+
+.bbutton {
+  width: 20%;
+  height: 40px;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  background-color:  rgb(72, 163, 173);
+  color: #fff;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.small-box {
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(135deg,  rgb(72, 163, 173), rgb(72, 163, 173));
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+  transition: all 1s;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.small-contain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.scontent {
+  font-size: 0.8em;
+  color: #fff;
+  text-align: center;
+  padding: 2em 4em;
+  line-height: 1.7em;
+}
+
+.sbutton {
+  width: 60%;
+  height: 40px;
+  border-radius: 24px;
+  border: 1px solid #fff;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.big-box.active {
+  left: 0;
+  transition: all 0.5s;
+}
+
+.small-box.active {
+  left: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
 </style>

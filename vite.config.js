@@ -20,7 +20,7 @@ export default defineConfig({
   },
   plugins: [vue(),
     Icons({
-      compiler: 'vue3', // 使用 Vue 3
+      compiler: 'vue3', 
       customCollections: {
         // 自定义图标集合
       },

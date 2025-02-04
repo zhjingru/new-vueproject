@@ -6,16 +6,14 @@
     min-width: 1280px;
 } */
 .headerNav {
-    margin-right: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    width: 1120px;
-    position:fixed;
-    top: 0;
-    background-color:rgb(221.7, 222.6, 224.4);
-    color:  #4a4646;
+    width: 1180px;
+    background-image: url('@/assets/backhead.png');
+    background-size: cover;
+    top: auto;
     z-index: 999;
 }
 .icon-spacing {

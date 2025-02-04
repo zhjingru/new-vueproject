@@ -1,20 +1,20 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 import NavMenu from './navMenu.vue';
 import Header from './headNav.vue';
-import Headerdown from './headerdown.vue'
 </script>
 
 <template>
-    <div class="common-layout">
-    <el-container >
+  <div class="common-layout">
+    <el-container>
       <!-- 左侧导航栏 -->
       <NavMenu />
       <el-container class="header-and-main">
-         <!-- 头部 -->
-         <el-header>
-             <Header />
-         </el-header>
+        <!-- 头部 -->
+        <el-header>
+          <Header />
+        </el-header>
+        <!-- main -->
         <el-main>
           <el-scrollbar>
             <RouterView />
@@ -23,12 +23,16 @@ import Headerdown from './headerdown.vue'
       </el-container>
     </el-container>
   </div>
-   
+
 </template>
 
 <style scoped>
 .header-and-main {
   flex-direction: column;
-  height:100vh;
+  height: 100vh;
+}
+
+.el-main{
+  padding-right: 0;
 }
 </style>
