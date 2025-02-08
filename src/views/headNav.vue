@@ -8,7 +8,7 @@ import {ref} from 'vue'
 <div>
     <div class="headerNav">
         <div class="header-logo">
-            <img src="@/assets/logo.png" alt="">
+            <img src="@/assets/logo.png" alt="" style="margin-left: 20px;">
             <h2>智慧医疗检查推荐系统</h2>
         </div>
     </div>
